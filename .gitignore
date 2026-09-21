@@ -1,0 +1,61 @@
+# Environment files (CRITICAL: NEVER COMMIT SECRETS)
+.env
+.env.*
+*.env
+*.env.local
+server/.env
+server/.env.*
+client/.env
+client/.env.local
+client/.env.*
+.env.production
+.env.development
+
+# Node dependencies & Next.js build
+node_modules/
+client/node_modules/
+.next/
+client/.next/
+client/out/
+build/
+dist/
+
+# Python cache & virtual environments
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Testing & coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Logs & temp files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# IDE & OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Keys & Certificates
+*.pem
+*.key
+*.cert
+*.crt
+service-account*.json
