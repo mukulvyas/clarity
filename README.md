@@ -18,6 +18,58 @@
 
 ---
 
+## 🎯 Chosen Vertical
+
+- **Domain:** Legal Technology & Consumer Rights (AI Legal Assistant)
+- **Target Persona:** Everyday signers, tenants, freelance contractors, employees, and small business owners who lack on-demand legal counsel and face complex, jargon-heavy agreements.
+- **Core Mission:** Democratize legal contract understanding by transforming binding, intimidating legal text into plain, reassuring English with grounded clause citations and proactive risk mitigation.
+
+---
+
+## 🧠 Approach and Logic
+
+Clarity AI rejects generic, ungrounded LLM prompting in favor of a strict, multi-stage legal reasoning pipeline:
+
+1. **Intent Classification & Adaptive Routing:**
+   - Detects whether the user is asking for a **holistic contract overview** (e.g., *"What is this document about?"*, *"Summarize my obligations"*) or a **specific clause lookup** (e.g., *"What is my late fee?"*, *"Can I have pets?"*).
+   - Prevents narrow vector search from over-indexing on a single obscure clause during broad overview queries.
+
+2. **Conversational Multi-Turn Memory Buffer:**
+   - Maintains a sliding window of the last 6 message turns (`history` buffer) and feeds it into Google Gemini 2.5 Flash.
+   - Enables natural context-dependent follow-up questions (e.g., *"What if I break it earlier?"* directly following a termination query).
+
+3. **Strict Grounding & Zero-Hallucination Policy:**
+   - Every substantive claim must cite the exact Section number and page reference.
+   - If an inquiry falls outside the document’s explicit four corners, the engine executes an **honest refusal** detailing what the agreement actually addresses rather than fabricating provisions.
+
+---
+
+## ⚙️ How the Solution Works
+
+1. **Document Ingestion & Chunking:**
+   - The contract is parsed into coherent legal clauses, preserving structural metadata (section titles, numbering, page anchors).
+2. **Dense Semantic Embeddings:**
+   - Each clause is embedded into a 768-dimensional dense vector using **Google text-embedding-004**.
+3. **High-Speed Vector Storage & Retrieval:**
+   - Embeddings are indexed in **Supabase PostgreSQL** utilizing the **pgvector** extension with HNSW indexing for sub-second cosine distance searches.
+4. **Context Assembly & Prompt Synthesis:**
+   - The system retrieves the top-$k$ most relevant clauses, formats them with their respective section identifiers, attaches conversational history, and constructs a grounded prompt.
+5. **Generative Synthesis & Action Formulation:**
+   - **Google Gemini 2.5 Flash** synthesizes a plain-English explanation, formats structured citations, and suggests actionable next steps for the signer.
+6. **Redline Comparison & Risk Scoring:**
+   - Evaluates risk levels (**Low**, **Medium**, **High**, **Critical**) and highlights newly introduced liabilities between document revisions.
+
+---
+
+## 📌 Assumptions Made
+
+1. **Document Formats:** Assumes agreements are provided in standard digital text or PDF formats where text extraction is feasible.
+2. **Governing Language:** The primary pipeline is optimized for English-language commercial and residential agreements.
+3. **Role of AI:** Clarity AI functions as an assistive educational and analysis tool to empower signers; it provides grounded clause translation and risk flagging, but does not constitute formal attorney-client legal representation.
+4. **Context Boundaries:** The chatbot's factual truth is strictly bounded by the uploaded contract's provisions; it does not assume external unstated addenda unless provided.
+
+---
+
 ## 🎯 Problem Statement & Solution
 
 ### The Problem
