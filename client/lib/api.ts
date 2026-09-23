@@ -13,7 +13,11 @@ import {
   getMockActionPlan,
 } from "./mockData";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000/api";
+const API_BASE =
+  process.env.NEXT_PUBLIC_API_BASE_URL ??
+  (process.env.NODE_ENV === "production"
+    ? "https://clarity-6k7g.onrender.com/api"
+    : "http://localhost:8000/api");
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 

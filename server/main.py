@@ -62,15 +62,17 @@ app = FastAPI(
     # docs_url=None if not settings.is_dev else "/docs",
 )
 
-# CORS — allow the Next.js dev server and any configured origins
-allowed_origins = os.environ.get(
+# CORS — allow the Next.js dev server, production Vercel app, and any configured origins
+raw_origins = os.environ.get(
     "ALLOWED_ORIGINS",
-    "http://localhost:3000,http://127.0.0.1:3000",
-).split(",")
+    "http://localhost:3000,http://127.0.0.1:3000,https://clarity-dusky-eight.vercel.app",
+)
+allowed_origins = [o.strip() for o in raw_origins.split(",") if o.strip()]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=allowed_origins,
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
