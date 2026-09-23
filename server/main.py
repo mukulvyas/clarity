@@ -37,16 +37,18 @@ async def lifespan(app: FastAPI):
     """Startup validations — fail fast before accepting any traffic."""
     settings = get_settings()
 
-    # 1. Validate critical env vars
-    settings.validate()
+    # Validate and connect to external services only in non-test environments
+    if settings.environment != "test":
+        # 1. Validate critical env vars
+        settings.validate()
 
-    # 2. Initialize Supabase connection
-    init_supabase()
-    logger.info("Supabase client initialized.")
+        # 2. Initialize Supabase connection
+        init_supabase()
+        logger.info("Supabase client initialized.")
 
-    # 3. Assert embedding model dimension matches vector(768) column
-    from server.embeddings import assert_embedding_dim
-    assert_embedding_dim()
+        # 3. Assert embedding model dimension matches vector(768) column
+        from server.embeddings import assert_embedding_dim
+        assert_embedding_dim()
 
     logger.info("Clarity backend ready. Environment: %s", settings.environment)
     yield
