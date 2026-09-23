@@ -9,9 +9,8 @@ python-dotenv>=1.0.1
 # Supabase
 supabase==2.10.0
 
-# Gemini AI + ADK
+# Gemini AI
 google-generativeai==0.8.3
-google-adk==1.3.0
 google-api-core==2.24.0
 
 # Document parsing
