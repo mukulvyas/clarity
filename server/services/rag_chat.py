@@ -68,30 +68,30 @@ DEMO_LEASE_CLAUSES = [
     {
         "clause_id": "clause-4-1-rent",
         "section_ref": "Section 4.1",
-        "title": "Rent, Due Dates & Late Grace Period",
+        "title": "Monthly Rent, Due Dates & Grace Period",
         "page_ref": "Page 3, Line 42",
-        "original_text": "Rent is $2,100.00 per month due on the 1st of each calendar month. Late Charge: Tenant agrees to pay a $105 charge if rent payment is not received in full by Oakwood Management after 5:00 PM on the 5th day of the calendar month."
+        "original_text": "Monthly Rent is ₹35,000.00 due on or before the 1st day of each English calendar month. Late Payment Fee: Tenant agrees to pay a late fee of ₹1,500.00 if the monthly rent is not received in full by Palm Grove Management by 5:00 PM on the 5th day of the month."
     },
     {
         "clause_id": "clause-6-1-renewal",
         "section_ref": "Section 6.1",
-        "title": "Automatic Renewal & Notice Period",
+        "title": "11-Month Term & Notice Period",
         "page_ref": "Page 4, Line 22",
-        "original_text": "This Agreement shall automatically renew for successive terms of twelve (12) months unless either party provides formal written notice of non-renewal not less than sixty (60) days prior to the expiration date."
+        "original_text": "This Agreement shall be in force for an initial lock-in period of eleven (11) months. Either party may terminate by providing not less than two (2) months prior written notice. Rent will escalate by 10% upon execution of any renewal agreement."
     },
     {
         "clause_id": "clause-9-3-repairs",
         "section_ref": "Section 9.3",
         "title": "Maintenance Threshold & Repairs",
         "page_ref": "Page 6, Line 08",
-        "original_text": "Tenant agrees to maintain premises in clean condition and pay for repairs resulting from misuse or minor repair calls under $75.00. Landlord covers major mechanical failures."
+        "original_text": "Tenant agrees to maintain premises in clean condition and pay for routine minor repairs costing under ₹1,500.00. Landlord covers major structural, plumbing mains, and electrical line repairs."
     },
     {
         "clause_id": "clause-18-2-termination",
         "section_ref": "Section 18.2",
-        "title": "Early Termination Penalty",
+        "title": "Lock-in Period & Early Termination Penalty",
         "page_ref": "Page 9, Line 14",
-        "original_text": "In the event Tenant vacates, abandons, or terminates prior to the Natural Expiration Date, Tenant shall forfeit the full security deposit ($2,100.00) and remain jointly and severally liable for an Early Termination Fee equal to two (2) months' Base Rent ($4,200.00)."
+        "original_text": "In the event Tenant vacates or terminates prior to completion of the 11-month lock-in period, Tenant shall forfeit the full security deposit (₹1,05,000.00, equivalent to 3 months rent) and remain liable for an Early Termination Penalty equal to two (2) months rent (₹70,000.00)."
     }
 ]
 
@@ -101,28 +101,28 @@ DEMO_FREELANCE_CLAUSES = [
         "section_ref": "Section 1.1",
         "title": "Scope of Work & Milestone Deliverables",
         "page_ref": "Page 1, Line 12",
-        "original_text": "Designer agrees to deliver UI/UX design wireframes and final Figma assets according to the agreed project schedule in Statement of Work A."
+        "original_text": "Contractor agrees to deliver UI/UX wireframes and final design Figma assets for the web application according to the milestone schedule in Statement of Work Annexure A."
     },
     {
         "clause_id": "clause-3-2-payment",
         "section_ref": "Section 3.2",
-        "title": "Payment Terms & Late Fee Interest",
+        "title": "Payment Terms, TDS & GST",
         "page_ref": "Page 2, Line 18",
-        "original_text": "Client shall pay invoices within thirty (30) days of receipt (Net 30). Unpaid balances after 30 days shall accrue interest at 1.5% per month."
+        "original_text": "Total project fee is ₹1,50,000.00 payable in milestones. Client shall pay invoices within thirty (30) days of receipt (Net 30) via NEFT/RTGS. Payments are subject to applicable TDS under Section 194J of the Income Tax Act, 1961, and 18% GST where registered."
     },
     {
         "clause_id": "clause-5-1-ip",
         "section_ref": "Section 5.1",
         "title": "Intellectual Property & Work Product Ownership",
         "page_ref": "Page 3, Line 05",
-        "original_text": "Upon receipt of full payment, Designer assigns to Client all right, title, and interest in and to final design deliverables."
+        "original_text": "Upon full and final payment of the total agreed fee (₹1,50,000.00), Contractor assigns to Client all worldwide copyright, title, and ownership in the final deliverable designs."
     },
     {
         "clause_id": "clause-8-3-termination",
         "section_ref": "Section 8.3",
-        "title": "Termination for Convenience & Notice",
+        "title": "Termination for Convenience & Jurisdiction",
         "page_ref": "Page 5, Line 22",
-        "original_text": "Either party may terminate this Agreement at any time without cause upon fourteen (14) days prior written notice. Client shall compensate Designer for all work completed prior to termination."
+        "original_text": "Either party may terminate this Agreement without cause upon fourteen (14) days prior written notice. This Agreement is governed by the laws of India, with exclusive jurisdiction in the courts of New Delhi/Bengaluru."
     }
 ]
 
@@ -130,30 +130,30 @@ DEMO_TECH_OFFER_CLAUSES = [
     {
         "clause_id": "clause-1-2-salary",
         "section_ref": "Section 1.2",
-        "title": "Base Salary & Signing Bonus",
+        "title": "Annual CTC & Joining Bonus",
         "page_ref": "Page 2, Line 04",
-        "original_text": "Base salary shall be $165,000 per annum payable semi-monthly. A one-time signing bonus of $15,000 is subject to full pro-rata repayment should Employee voluntarily terminate within twelve (12) months."
+        "original_text": "Total Cost to Company (CTC) shall be ₹24,00,000.00 per annum (₹2,00,000.00 per month gross). A one-time joining bonus of ₹2,00,000.00 is subject to 100% recovery if Employee resigns within twelve (12) months."
     },
     {
         "clause_id": "clause-2-1-noncompete",
         "section_ref": "Section 2.1",
-        "title": "Non-Competition & Geographic Restriction",
+        "title": "Non-Competition & Section 27 Indian Contract Act",
         "page_ref": "Page 3, Line 14",
-        "original_text": "Employee agrees that during employment and for a period of twelve (12) months following termination, Employee shall not directly or indirectly engage in competitive business activities within a 50-mile radius."
+        "original_text": "Employee agrees that during employment, Employee shall not directly or indirectly engage in competitive business activities. Post-termination restrictions are subject to Section 27 of the Indian Contract Act, 1872."
     },
     {
         "clause_id": "clause-4-2-equity",
         "section_ref": "Section 4.2",
-        "title": "Equity Incentive & Vesting Cliff",
+        "title": "ESOP Allocation & 1-Year Cliff",
         "page_ref": "Page 5, Line 08",
-        "original_text": "Stock options shall vest over a four (4) year schedule: twenty-five percent (25%) upon completion of twelve (12) months of continuous service (1-year cliff), and 1/48th per month thereafter."
+        "original_text": "Employee Stock Options (ESOPs) shall vest over a 4-year schedule: twenty-five percent (25%) upon completion of twelve (12) months of continuous service (1-year cliff), and 1/48th per month thereafter."
     },
     {
         "clause_id": "clause-7-1-ip",
         "section_ref": "Section 7.1",
-        "title": "Invention Assignment & IP Ownership",
+        "title": "Inventions Assignment & IP Ownership",
         "page_ref": "Page 7, Line 22",
-        "original_text": "All inventions, software, trade secrets, and patents developed by Employee during employment relating to company business belong solely and exclusively to TechCorp."
+        "original_text": "All inventions, software code, algorithms, and technical documentation developed by Employee during employment belong exclusively to the Company."
     }
 ]
 

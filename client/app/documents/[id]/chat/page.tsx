@@ -314,7 +314,12 @@ export default function DocumentChatPage({
               </div>
 
               {/* Chat Thread Container */}
-              <div className="flex-1 bg-surface-container-lowest rounded-2xl p-space-md sm:p-space-lg shadow-sm flex flex-col gap-space-md min-h-[480px] border border-surface-container overflow-y-auto max-h-[600px]">
+              <div
+                role="log"
+                aria-live="polite"
+                aria-label="Conversation messages"
+                className="flex-1 bg-surface-container-lowest rounded-2xl p-space-md sm:p-space-lg shadow-sm flex flex-col gap-space-md min-h-[480px] border border-surface-container overflow-y-auto max-h-[600px]"
+              >
                 {messages.map((msg) => (
                   <div
                     key={msg.id}
@@ -330,7 +335,7 @@ export default function DocumentChatPage({
                     ) : (
                       <div className="p-space-md rounded-2xl bg-surface-container-low text-on-surface font-body-md text-body-md shadow-sm rounded-bl-xs border border-surface-container space-y-3 w-full">
                         <div className="flex items-center gap-2 text-primary font-semibold">
-                          <span className="material-symbols-outlined text-[18px]">auto_awesome</span>
+                          <span className="material-symbols-outlined text-[18px]" aria-hidden="true">auto_awesome</span>
                           <span className="font-label-sm text-label-sm uppercase tracking-wider">Clarity Answer</span>
                         </div>
 
@@ -358,7 +363,7 @@ export default function DocumentChatPage({
 
                         {msg.next_action && (
                           <div className="p-2.5 rounded-xl bg-primary-fixed/40 text-on-primary-fixed-variant font-body-sm text-body-sm font-medium flex items-center gap-2">
-                            <span className="material-symbols-outlined text-[16px] text-primary">arrow_forward</span>
+                            <span className="material-symbols-outlined text-[16px] text-primary" aria-hidden="true">arrow_forward</span>
                             <span>Suggested next step: {msg.next_action}</span>
                           </div>
                         )}
@@ -368,8 +373,8 @@ export default function DocumentChatPage({
                 ))}
 
                 {loading && (
-                  <div className="self-start flex items-center gap-2 p-3 rounded-2xl bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
-                    <span className="material-symbols-outlined text-[18px] text-primary animate-spin">sync</span>
+                  <div className="self-start flex items-center gap-2 p-3 rounded-2xl bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm" role="status">
+                    <span className="material-symbols-outlined text-[18px] text-primary animate-spin" aria-hidden="true">sync</span>
                     <span>Clarity is analyzing your document and building citations...</span>
                   </div>
                 )}
@@ -380,6 +385,7 @@ export default function DocumentChatPage({
               <div className="relative flex items-center">
                 <input
                   type="text"
+                  aria-label="Ask a question about your agreement"
                   placeholder="Ask a question about your lease (e.g. 'Can I sublet my apartment?')..."
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
@@ -389,10 +395,11 @@ export default function DocumentChatPage({
                 <button
                   onClick={() => handleSend()}
                   disabled={!input.trim() || loading}
+                  aria-label="Send message"
                   className="absolute right-2 w-10 h-10 rounded-full bg-primary text-on-primary hover:bg-primary-container disabled:opacity-40 transition-all flex items-center justify-center shadow-sm"
                   type="button"
                 >
-                  <span className="material-symbols-outlined text-[20px]">send</span>
+                  <span className="material-symbols-outlined text-[20px]" aria-hidden="true">send</span>
                 </button>
               </div>
             </main>

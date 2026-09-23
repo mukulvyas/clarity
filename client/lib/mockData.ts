@@ -47,33 +47,33 @@ export const MOCK_RECENT_DOCUMENTS = [
 
 export const LEASE_DOCUMENT_SUMMARY: DocumentSummary = {
   document_id: "oakwood-lease-4b",
-  filename: "Apartment Lease Agreement — Unit 4B",
+  filename: "Residential Lease Agreement — Flat 4B",
   page_count: 14,
-  property_name: "Oakwood Heights Residences",
-  upload_info: "Uploaded today at 9:30 AM • 12 Months Fixed Term",
+  property_name: "Palm Grove Heights, Indiranagar, Bengaluru",
+  upload_info: "Uploaded today at 9:30 AM • 11 Months Lock-in Term",
   bottom_line: [
     {
-      title: "Early Termination Fee",
+      title: "Lock-in Breach Penalty",
       tag: "risky",
-      summary: "Leaving before 12 months requires a 2 months' rent penalty ($4,200) plus total forfeiture of your original $2,100 security deposit.",
+      summary: "Vacating before 11 months requires a 2 months' rent penalty (₹70,000) plus total forfeiture of your ₹1,05,000 security deposit.",
       clause_id: "clause-18-2-termination",
     },
     {
-      title: "Automatic Renewal Catch",
+      title: "Automatic Renewal & Notice",
       tag: "worth_reviewing",
-      summary: "Unless you provide formal written notice 60 days before lease end, this lease automatically locks you into another 12 full months.",
+      summary: "Agreement has an 11-month lock-in. Renewal includes a 10% rent escalation unless 2 months prior written notice is served.",
       clause_id: "clause-6-1-renewal",
     },
     {
       title: "Monthly Rent & Deposit",
       tag: "standard",
-      summary: "You pay $2,100/mo strictly due on the 1st. Security deposit is $2,100, refundable within 21 calendar days of checkout.",
+      summary: "Monthly rent is ₹35,000 due on the 1st. Security deposit is ₹1,05,000 (3 months), refundable within 21 days of vacating.",
       clause_id: "clause-4-1-rent",
     },
     {
       title: "Maintenance & Repairs",
       tag: "standard",
-      summary: "Landlord covers major plumbing, structural, and heating/cooling. You are responsible for minor repairs costing under $75.",
+      summary: "Landlord covers structural, plumbing mains, and electrical conduits. Tenant covers minor repairs costing under ₹1,500.",
       clause_id: "clause-9-3-repairs",
     }
   ],
@@ -82,9 +82,9 @@ export const LEASE_DOCUMENT_SUMMARY: DocumentSummary = {
       clause_id: "clause-18-2-termination",
       section_ref: "Section 18.2",
       category: "Term & Termination",
-      title: "Early Termination Penalty",
-      plain_explanation: "In the event you vacate, abandon, or terminate prior to the Natural Expiration Date, you forfeit the full security deposit and remain liable for 2 months' base rent penalty ($4,200).",
-      original_text: "In the event Tenant vacates, abandons, or terminates prior to the Natural Expiration Date, Tenant shall forfeit the full security deposit ($2,100.00) and remain jointly and severally liable for an Early Termination Fee equal to two (2) months' Base Rent ($4,200.00).",
+      title: "Lock-in Period & Early Termination Penalty",
+      plain_explanation: "In the event you vacate or terminate prior to completion of the 11-month lock-in period, you forfeit the full security deposit (₹1,05,000) and remain liable for 2 months' rent penalty (₹70,000).",
+      original_text: "In the event Tenant vacates, abandons, or terminates prior to completion of the 11-month lock-in period, Tenant shall forfeit the full security deposit (₹1,05,000.00) and remain liable to pay liquidated damages equal to two (2) months' rent (₹70,000.00).",
       page_ref: "Page 9, Line 14",
       risk_tag: "risky",
     },
@@ -92,9 +92,9 @@ export const LEASE_DOCUMENT_SUMMARY: DocumentSummary = {
       clause_id: "clause-6-1-renewal",
       section_ref: "Section 6.1",
       category: "Lease Duration",
-      title: "Automatic Renewal & Notice Period",
-      plain_explanation: "This agreement automatically renews for an additional 12-month period unless written notice of intent to vacate is delivered to Landlord at least sixty (60) days prior to the expiration date.",
-      original_text: "This Agreement shall automatically renew for successive terms of twelve (12) months unless either party provides formal written notice of non-renewal not less than sixty (60) days prior to the expiration date.",
+      title: "11-Month Term & Notice Period",
+      plain_explanation: "This agreement is valid for an initial lock-in period of 11 months. Either party may terminate with 2 months advance notice. Renewal incurs a 10% standard annual escalation.",
+      original_text: "This Agreement shall remain in force for an initial lock-in period of eleven (11) months. Either party may terminate by providing not less than two (2) months prior written notice. Rent will escalate by 10% upon renewal.",
       page_ref: "Page 4, Line 22",
       risk_tag: "worth_reviewing",
     },
@@ -102,9 +102,9 @@ export const LEASE_DOCUMENT_SUMMARY: DocumentSummary = {
       clause_id: "clause-4-1-rent",
       section_ref: "Section 4.1",
       category: "Payments",
-      title: "Rent, Due Dates & Late Grace Period",
-      plain_explanation: "You have a comfortable 5-day grace window every month before any late fee kicks in. If payment arrives after 5:00 PM on the 5th day, you incur a one-time 5% fee ($105).",
-      original_text: "Late Charge: Tenant agrees to pay a $105 charge if rent payment is not received in full by Oakwood Management after 5:00 PM on the 5th day of the calendar month.",
+      title: "Monthly Rent, Due Dates & Grace Period",
+      plain_explanation: "Rent of ₹35,000 is due on the 1st of each month via UPI/NEFT. A 5-day grace period applies. Late payments after the 5th incur a ₹1,500 fee.",
+      original_text: "Monthly Rent is ₹35,000.00 due on or before the 1st day of each English calendar month. Late Fee: A penalty of ₹1,500.00 shall be charged if rent is not received in full by 5:00 PM on the 5th day of the month.",
       page_ref: "Page 3, Line 42",
       risk_tag: "standard",
     },
@@ -113,8 +113,8 @@ export const LEASE_DOCUMENT_SUMMARY: DocumentSummary = {
       section_ref: "Section 9.3",
       category: "Maintenance",
       title: "Maintenance Threshold & Repairs",
-      plain_explanation: "Landlord maintains HVAC, electrical, plumbing, and structural components. Tenant is responsible for minor repair calls and routine maintenance items costing under $75.00.",
-      original_text: "Tenant agrees to maintain premises in clean condition and pay for repairs resulting from misuse or minor repair calls under $75.00. Landlord covers major mechanical failures.",
+      plain_explanation: "Landlord maintains building structure, electrical mains, and primary drainage. Tenant is responsible for minor repair calls costing under ₹1,500.00.",
+      original_text: "Tenant agrees to maintain premises in clean condition and pay for routine minor repairs costing under ₹1,500.00. Landlord covers major structural, plumbing mains, and electrical line repairs.",
       page_ref: "Page 6, Line 08",
       risk_tag: "standard",
     },
@@ -284,47 +284,47 @@ export const MOCK_CLAUSE_DETAILS: Record<string, ClauseDetail> = {
     ...LEASE_DOCUMENT_SUMMARY.clauses[0],
     category: "Term & Termination",
     fairness_score: 25,
-    real_life_scenario: "If a sudden job relocation or family emergency forces you to move 6 months into your lease, you would owe $4,200 in cash penalty plus lose your $2,100 security deposit—costing you $6,300 total just to break the lease.",
+    real_life_scenario: "If a job relocation or family emergency forces you to vacate 6 months into your lease, you would owe a ₹70,000 cash penalty (2 months rent) plus lose your ₹1,05,000 security deposit—costing you ₹1,75,000 total just to exit.",
     negotiation_questions: [
-      "Can we cap the early termination penalty at 1 month's rent instead of 2 months?",
-      "Can we include a 'job transfer or military order' exemption that waives the penalty with 30 days notice?",
-      "Can we clarify that the security deposit is returned per normal damage inspection rules rather than automatically forfeited?"
+      "Can we cap the early termination penalty at 1 month's rent (₹35,000) instead of 2 months?",
+      "Can we include an employment transfer clause that waives the penalty with 60 days advance notice?",
+      "Can we ensure the security deposit is refunded per standard handover inspection rather than automatically forfeited?"
     ],
   },
   "clause-6-1-renewal": {
     ...LEASE_DOCUMENT_SUMMARY.clauses[1],
     category: "Lease Duration",
     fairness_score: 55,
-    real_life_scenario: "If you forget to send a certified letter by month 10 of your lease, you are legally locked into paying another full year of rent ($25,200 total), even if you plan to move.",
+    real_life_scenario: "If you forget to send written notice 2 months before lease expiry, you may be held responsible for an automatic 10% rent escalation (₹38,500/month) for another 11-month term.",
     negotiation_questions: [
       "Can the notice period be adjusted to 30 days instead of 60 days?",
-      "Can the automatic renewal convert to a month-to-month tenancy instead of a full 12-month lock-in?"
+      "Can the agreement allow month-to-month extension at mutual agreement without mandatory 10% escalation?"
     ],
   },
   "clause-4-1-rent": {
     ...LEASE_DOCUMENT_SUMMARY.clauses[2],
     category: "Payments",
     fairness_score: 88,
-    real_life_scenario: "If payday falls on the 3rd or a bank holiday delays ACH transfer until the 4th, you won't incur any late fee because the grace period extends until 5:00 PM on the 5th.",
+    real_life_scenario: "If salary is credited on the 3rd or a banking holiday delays UPI transfer until the 4th, you will not incur any late fee because the grace window extends until 5:00 PM on the 5th.",
     negotiation_questions: [],
   },
   "clause-9-3-repairs": {
     ...LEASE_DOCUMENT_SUMMARY.clauses[3],
     category: "Maintenance",
     fairness_score: 82,
-    real_life_scenario: "If a light bulb burns out or a kitchen sink drain needs a minor $30 unclogging, you pay for it. If the water heater breaks down ($1,500), Oakwood Management pays 100%.",
+    real_life_scenario: "If a light bulb burns out or a kitchen sink drain needs a minor ₹300 plumber visit, you pay for it. If the building water motor breaks down, Palm Grove Management pays 100%.",
     negotiation_questions: [
-      "Can the landlord confirm that emergency plumbing and HVAC issues over $75 do not require tenant upfront payment?"
+      "Can the landlord confirm that major plumbing and electrical faults over ₹1,500 do not require tenant upfront payment?"
     ],
   },
   "clause-3-2-payment": {
     ...FREELANCE_DOCUMENT_SUMMARY.clauses[0],
     category: "Compensation & Fees",
     fairness_score: 65,
-    real_life_scenario: "If the client pays on Day 45 instead of Day 30 for an $8,500 invoice, you can legally add a $127.50 monthly late interest charge to their balance.",
+    real_life_scenario: "If the client pays on Day 45 instead of Day 30 for a ₹1,50,000 invoice, you can legally claim a 1.5% monthly late interest charge on the outstanding balance.",
     negotiation_questions: [
       "Can we shorten the payment terms from Net 30 to Net 15 for initial project milestones?",
-      "Can we request a 30% upfront deposit before work commences on Statement of Work A?"
+      "Can we request a 30% advance deposit before work commences on Statement of Work Annexure A?"
     ],
   },
   "clause-5-1-ip": {
@@ -601,25 +601,25 @@ export function getMockActionPlan(documentId: string): ActionPlan {
 export function getMockDocumentMetadata(documentId: string) {
   if (documentId === "freelance-design-contract") {
     return [
-      { label: "Total project fee:", value: "$8,500.00 Fixed" },
-      { label: "Payment terms:", value: "Net 30 (1.5% Late Interest)" },
+      { label: "Total project fee:", value: "₹1,50,000.00 Fixed" },
+      { label: "Payment terms:", value: "Net 30 (1% TDS + 18% GST)" },
       { label: "IP transfer:", value: "Upon 100% Full Payment" },
-      { label: "Jurisdiction:", value: "State Civil Code" },
+      { label: "Jurisdiction:", value: "Indian Contract Act, 1872" },
     ];
   }
   if (documentId === "tech-corp-offer") {
     return [
-      { label: "Base salary:", value: "$165,000.00 / year" },
-      { label: "Signing bonus:", value: "$15,000.00 (12-mo clawback)" },
-      { label: "Non-compete radius:", value: "12 Months (50 Miles)" },
-      { label: "Jurisdiction:", value: "State Labor Code" },
+      { label: "Annual CTC:", value: "₹24,00,000.00 / year (24 LPA)" },
+      { label: "Joining bonus:", value: "₹2,00,000.00 (12-mo clawback)" },
+      { label: "Notice period:", value: "60 Days (PF & Gratuity Eligible)" },
+      { label: "Jurisdiction:", value: "Indian Labour Laws (Bengaluru)" },
     ];
   }
   return [
-    { label: "Term length:", value: "12 Months (Fixed)" },
-    { label: "Monthly rent:", value: "$2,100.00" },
-    { label: "Security deposit:", value: "$2,100.00" },
-    { label: "Jurisdiction:", value: "State Tenancy Code" },
+    { label: "Term length:", value: "11 Months (Lock-in Period)" },
+    { label: "Monthly rent:", value: "₹35,000.00" },
+    { label: "Security deposit:", value: "₹1,05,000.00 (3 Months)" },
+    { label: "Jurisdiction:", value: "Bengaluru, Karnataka (India)" },
   ];
 }
 
@@ -688,41 +688,41 @@ export const MOCK_COMPARE_RESPONSE: CompareResponse = {
   clause_diffs: [
     {
       section_ref: "Section 18.2",
-      title: "Early Termination Fee & Penalty",
+      title: "Lock-in Breach & Termination Penalty",
       classification: "better_for_you",
-      explanation: "Landlord accepted your counter-offer! Early termination penalty reduced from 2 months' rent ($4,200) to 1 month's rent ($2,100), and deposit forfeiture condition was removed.",
+      explanation: "Landlord accepted your counter-offer! Early exit penalty was reduced from 2 months' rent (₹70,000) to 1 month's rent (₹35,000), and deposit forfeiture condition was eliminated.",
     },
     {
-      section_ref: "Section 8.1",
+      section_ref: "Section 14.1",
       title: "Pet Deposit Terms",
       classification: "better_for_you",
-      explanation: "The $500 pet fee was changed from a 'non-refundable fee' to a 'refundable deposit', returned upon move-out if no pet damage occurs.",
+      explanation: "The monthly pet fee was waived, and the non-refundable sanitation fee was converted to a refundable deposit of ₹10,000 returned upon move-out if no pet damage occurs.",
     },
     {
       section_ref: "Section 6.1",
       title: "Notice Period for Non-Renewal",
       classification: "better_for_you",
-      explanation: "Notice required to prevent automatic renewal was reduced from 60 days to 30 days written notice.",
+      explanation: "Notice required to terminate after the 11-month lock-in was reduced from 60 days to 30 days written notice.",
     },
     {
       section_ref: "Section 4.1",
       title: "Rent Payment Grace Period & Late Fee",
       classification: "same",
-      explanation: "The 5-day grace period and $105 late fee remain unchanged. Terms are balanced and standard.",
+      explanation: "The 5-day grace period and ₹1,500 late fee remain unchanged. Terms are balanced and standard.",
     }
   ],
 };
 
 export const MOCK_CHAT_RESPONSE: ChatResponse = {
-  answer: "According to Section 9.3 of your Oakwood Heights Lease Agreement, you are only responsible for minor repair calls costing under $75.00. For major appliance, HVAC, or plumbing issues exceeding $75, Oakwood Management is fully responsible for covering all repair costs.",
+  answer: "According to Section 9.3 of your Palm Grove Heights Lease Agreement, you are only responsible for routine minor repair calls costing under ₹1,500.00. For major appliance, plumbing mains, or electrical failures exceeding ₹1,500, Palm Grove Management is fully responsible for covering all repair costs.",
   cited_clauses: [
     {
       clause_id: "clause-9-3-repairs",
       section_ref: "Section 9.3",
-      excerpt: "Tenant agrees to maintain premises in clean condition and pay for repairs resulting from misuse or minor repair calls under $75.00. Landlord covers major mechanical failures.",
+      excerpt: "Tenant agrees to maintain premises in clean condition and pay for routine minor repairs costing under ₹1,500.00. Landlord covers major structural, plumbing mains, and electrical line repairs.",
       page_ref: "Page 6, Line 08",
     }
   ],
-  next_action: "If your repair estimate exceeds $75.00, submit a formal maintenance ticket in the Oakwood portal and cite Section 9.3.",
+  next_action: "If your repair estimate exceeds ₹1,500.00, submit a formal maintenance request to Palm Grove Management and cite Section 9.3.",
 };
 
