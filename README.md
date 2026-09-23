@@ -6,6 +6,9 @@
 [![API Status](https://img.shields.io/badge/API_Status-Online-brightgreen?style=for-the-badge&logo=fastapi)](https://clarity-6k7g.onrender.com/health)
 [![Google Gemini](https://img.shields.io/badge/Powered_by-Google_Gemini_2.5_Flash-4285F4?style=for-the-badge&logo=google)](https://ai.google.dev/)
 [![pgvector](https://img.shields.io/badge/Vector_DB-Supabase_pgvector-3ECF8E?style=for-the-badge&logo=supabase)](https://supabase.com/)
+[![Automated Tests](https://img.shields.io/badge/Tests-23_Passing-brightgreen?style=for-the-badge&logo=pytest)](tests/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+[![Jurisdiction](https://img.shields.io/badge/Jurisdiction-India_(INR_%E2%82%B9)-FF9933?style=for-the-badge)](Apartment_Lease_Original.pdf)
 
 ---
 
@@ -20,9 +23,10 @@
 
 ## 🎯 Chosen Vertical
 
-- **Domain:** Legal Technology & Consumer Rights (AI Legal Assistant)
-- **Target Persona:** Everyday signers, tenants, freelance contractors, employees, and small business owners who lack on-demand legal counsel and face complex, jargon-heavy agreements.
-- **Core Mission:** Democratize legal contract understanding by transforming binding, intimidating legal text into plain, reassuring English with grounded clause citations and proactive risk mitigation.
+- **Domain:** Legal Technology & Consumer Rights (AI Legal Assistant tailored for **India**)
+- **Target Persona:** Everyday Indian tenants, freelance contractors, tech workers, and small business owners signing agreements in Bengaluru, Mumbai, Delhi-NCR, Pune, and Hyderabad.
+- **Core Mission:** Democratize legal contract understanding by transforming binding, intimidating legal agreements into plain, reassuring English with grounded clause citations and proactive risk mitigation.
+- **Indian Legal Framework:** Built around the **Indian Contract Act, 1872**, **Transfer of Property Act, 1882**, Indian 11-month tenancy lock-ins, **18% GST**, and **Section 194J TDS**. All amounts in **Indian Rupees (₹ / INR)**.
 
 ---
 

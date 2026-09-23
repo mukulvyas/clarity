@@ -25,10 +25,10 @@ Output a strictly valid JSON object matching this schema exactly:
   "new_risks": 0,
   "clause_diffs": [
     {
-      "section_ref": "Section 8.2",
+      "section_ref": "Section 14.1",
       "title": "Pet Policy",
       "classification": "better_for_you", // must be "better_for_you", "worse_for_you", or "neutral"
-      "explanation": "The landlord removed the $50/month pet rent."
+      "explanation": "The landlord removed the ₹2,000/month pet fee."
     }
   ]
 }

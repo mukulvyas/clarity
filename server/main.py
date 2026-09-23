@@ -81,9 +81,33 @@ app.add_middleware(
 from starlette.middleware.gzip import GZipMiddleware
 app.add_middleware(GZipMiddleware, minimum_size=1000)
 
+import time
+from collections import defaultdict
+from fastapi.responses import JSONResponse
+
+# In-memory sliding window rate limiter (120 req/min per IP)
+_request_counts = defaultdict(list)
+RATE_LIMIT_MAX_REQUESTS = 120
+RATE_LIMIT_WINDOW_SECONDS = 60
+
 from fastapi import Request
 @app.middleware("http")
-async def add_security_headers(request: Request, call_next):
+async def security_and_rate_limit_middleware(request: Request, call_next):
+    # 1. Rate limiting check (bypassed for health check)
+    if not request.url.path.startswith("/health"):
+        client_ip = request.client.host if request.client else "unknown"
+        now = time.time()
+        window_start = now - RATE_LIMIT_WINDOW_SECONDS
+        _request_counts[client_ip] = [t for t in _request_counts[client_ip] if t > window_start]
+        if len(_request_counts[client_ip]) >= RATE_LIMIT_MAX_REQUESTS:
+            return JSONResponse(
+                status_code=429,
+                content={"detail": "Too many requests. Rate limit exceeded."},
+                headers={"Retry-After": "60", "X-Content-Type-Options": "nosniff", "X-Frame-Options": "DENY"}
+            )
+        _request_counts[client_ip].append(now)
+
+    # 2. Process request & attach security defense headers
     response = await call_next(request)
     response.headers["X-Content-Type-Options"] = "nosniff"
     response.headers["X-Frame-Options"] = "DENY"
